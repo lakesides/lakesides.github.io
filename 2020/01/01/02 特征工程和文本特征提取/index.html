@@ -6,15 +6,21 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/1 | Hexo</title>
+  <title>02 特征工程和文本特征提取 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2020/01/index.html">
+  <meta name="description" content="02 特征工程和文本特征提取数据集的构成数据存放形式 CSV 文件 mysql： 性能瓶颈，读取速度； 格式不符合机器学习的格式 pandas：读取工具 numpy为什么读取速度快：   动态语言 全局解释性锁 GIL : 释放了 （GIL数据安全），真正的多线程  可用的数据集 Kaggle : 大数据竞赛平台、真实数据、数据量大 UCI: 数据集覆盖科学、生活、经济等领域 Scikit-lea">
+<meta property="og:type" content="article">
+<meta property="og:title" content="02 特征工程和文本特征提取">
+<meta property="og:url" content="http://yoursite.com/2020/01/01/02%20%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B%E5%92%8C%E6%96%87%E6%9C%AC%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="02 特征工程和文本特征提取数据集的构成数据存放形式 CSV 文件 mysql： 性能瓶颈，读取速度； 格式不符合机器学习的格式 pandas：读取工具 numpy为什么读取速度快：   动态语言 全局解释性锁 GIL : 释放了 （GIL数据安全），真正的多线程  可用的数据集 Kaggle : 大数据竞赛平台、真实数据、数据量大 UCI: 数据集覆盖科学、生活、经济等领域 Scikit-lea">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2020/01/01/02%20%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B%E5%92%8C%E6%96%87%E6%9C%AC%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96/_v_images/20191107220216820_20237.png">
+<meta property="article:published_time" content="2020-01-01T08:53:13.653Z">
+<meta property="article:modified_time" content="2019-11-09T06:01:49.363Z">
 <meta property="article:author" content="Hello Lake">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/01/01/02%20%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B%E5%92%8C%E6%96%87%E6%9C%AC%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96/_v_images/20191107220216820_20237.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,295 +156,243 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-02 特征工程和文本特征提取" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/01%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%BB%8B%E7%BB%8D/" class="archive-article-date">
-  	<time datetime="2020-01-01T08:53:13.655Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/01%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%BB%8B%E7%BB%8D/">01 机器学习介绍</a>
+    <h1 class="article-title" itemprop="name">
+      02 特征工程和文本特征提取
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/02%20%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B%E5%92%8C%E6%96%87%E6%9C%AC%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96/" class="archive-article-date">
+        
+        <a href="/2020/01/01/02%20%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B%E5%92%8C%E6%96%87%E6%9C%AC%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96/" class="archive-article-date">
   	<time datetime="2020-01-01T08:53:13.653Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/02%20%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B%E5%92%8C%E6%96%87%E6%9C%AC%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96/">02 特征工程和文本特征提取</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="02-特征工程和文本特征提取"><a href="#02-特征工程和文本特征提取" class="headerlink" title="02 特征工程和文本特征提取"></a>02 特征工程和文本特征提取</h1><h2 id="数据集的构成"><a href="#数据集的构成" class="headerlink" title="数据集的构成"></a>数据集的构成</h2><h3 id="数据存放形式"><a href="#数据存放形式" class="headerlink" title="数据存放形式"></a>数据存放形式</h3><ol>
+<li>CSV 文件</li>
+<li>mysql： 性能瓶颈，读取速度； 格式不符合机器学习的格式</li>
+<li>pandas：读取工具</li>
+<li>numpy为什么读取速度快：</li>
+</ol>
+<ul>
+<li>动态语言</li>
+<li>全局解释性锁 GIL : 释放了 （GIL数据安全），真正的多线程</li>
+</ul>
+<h3 id="可用的数据集"><a href="#可用的数据集" class="headerlink" title="可用的数据集"></a>可用的数据集</h3><ol>
+<li>Kaggle : 大数据竞赛平台、真实数据、数据量大</li>
+<li>UCI: 数据集覆盖科学、生活、经济等领域</li>
+<li>Scikit-learn: 数据量小，方便学习</li>
+</ol>
+<h3 id="数据集的结构组成"><a href="#数据集的结构组成" class="headerlink" title="数据集的结构组成"></a>数据集的结构组成</h3><ul>
+<li>结构： 特征值 + 目标值<br><img src="_v_images/20191107220216820_20237.png" alt="数据集结构组成"></li>
+</ul>
+<h2 id="特征工程的定义"><a href="#特征工程的定义" class="headerlink" title="特征工程的定义"></a>特征工程的定义</h2><h3 id="特征工程是什么？"><a href="#特征工程是什么？" class="headerlink" title="特征工程是什么？"></a>特征工程是什么？</h3><p>特征工程：将原始数据转换为更好地代表预测模型的潜在问题的特征的过程，从而提供了对未知数据的预测准确性。</p>
+<ul>
+<li>很大程度上影响最后模型的精度</li>
+</ul>
+<h3 id="数据中对特征的处理"><a href="#数据中对特征的处理" class="headerlink" title="数据中对特征的处理"></a>数据中对特征的处理</h3><ol>
+<li>Pandas: 数据读取方便，基本的处理格式的工具</li>
+</ol>
+<ul>
+<li>DataFrame - 缺失值，数据处理</li>
+<li>机器学习：重复值不需要进行处理</li>
+</ul>
+<ol start="2">
+<li>Sklearn: 对特征进行处理提供强大的接口</li>
+</ol>
+<ul>
+<li>Python机器学习工具，包含许多知名算法的实现</li>
+<li>丰富的API<br>![特征处理过程](<em>v</em>images/20191108213321325_26320.png =500x)</li>
+</ul>
+<h2 id="数据的特征抽取"><a href="#数据的特征抽取" class="headerlink" title="数据的特征抽取"></a>数据的特征抽取</h2><h3 id="定义："><a href="#定义：" class="headerlink" title="定义："></a>定义：</h3><ul>
+<li>特征抽取是对文本等数据进行特征值化</li>
+<li>特征值化：让计算机更好的了解数据</li>
+</ul>
+<h2 id="Sklearn-特征抽取API-Sklearn-feature-extraction"><a href="#Sklearn-特征抽取API-Sklearn-feature-extraction" class="headerlink" title="Sklearn 特征抽取API  (Sklearn.feature_extraction)"></a>Sklearn 特征抽取API  (Sklearn.feature_extraction)</h2><h3 id="字典特征抽取"><a href="#字典特征抽取" class="headerlink" title="字典特征抽取"></a>字典特征抽取</h3><ul>
+<li>sklearn.feature_extraction.DictVectorizer</li>
+<li>把字典中的一些类别数据，分别进行转换成特征；数值型（浮点型)不会进行转化。</li>
+<li>数组形式，有类别的这些特征，先要转换字典数据</li>
+</ul>
+<ol>
+<li>fit_transform （直接接收字典）<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.feature_extraction <span class="keyword">import</span> DictVectorizer</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">dictver</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    字典数据抽取</span></span><br><span class="line"><span class="string">    :return:None</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="comment"># 实例化</span></span><br><span class="line">    dict = DictVectorizer(sparse=<span class="literal">False</span>)</span><br><span class="line">    <span class="comment"># 调用fit_transform</span></span><br><span class="line">    data = dict.fit_transform(</span><br><span class="line">        [&#123;<span class="string">'city'</span>: <span class="string">'北京'</span>, <span class="string">'temperature'</span>: <span class="number">100</span>&#125;,</span><br><span class="line">         &#123;<span class="string">'city'</span>: <span class="string">'上海'</span>, <span class="string">'temperature'</span>: <span class="number">60</span>&#125;,</span><br><span class="line">         &#123;<span class="string">'city'</span>: <span class="string">'深圳'</span>, <span class="string">'temperature'</span>: <span class="number">30</span>&#125;])</span><br><span class="line"></span><br><span class="line">    print(dict.get_feature_names())</span><br><span class="line">    print(dict.inverse_transform(data))</span><br><span class="line">    print(data)</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    dictver()</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">2. sparse矩阵 - 方便节约内存</span><br><span class="line">![sparse数组](_v_images&#x2F;20191108232423501_24010.png &#x3D;400x)</span><br><span class="line">- （0,1）- 行列坐标 ； 1.0 - 值</span><br><span class="line">3. One-hot 编码</span><br><span class="line">- 每个类别生成一个布尔列，这些列中只有一列可以为每个样本取值1，便于机器学习数值分析。</span><br><span class="line">- 避免对每个类别生成编码是，1，2，3这种的会存在大小关系。</span><br><span class="line">![one-hot编码](_v_images&#x2F;20191108234225645_1367.png &#x3D;400x)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">### 文本的特征抽取（数量）</span><br><span class="line">- sklearn.feature_extraction.text.CountVectorizer</span><br><span class="line">- 文本分类，情感分析</span><br><span class="line">- 对于单个英文字母不统计：不反应主题，没有情感依据</span><br><span class="line"></span><br><span class="line">1. 英文文本特征抽取</span><br><span class="line"></span><br><span class="line">&#96;&#96;&#96;python</span><br><span class="line">def countvec():</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    对文本进行特征值化</span><br><span class="line">    :return:None</span><br><span class="line">    &quot;&quot;&quot;</span><br><span class="line">    cv &#x3D; CountVectorizer()</span><br><span class="line">    data &#x3D; cv.fit_transform([&#39;life is short, i like python&#39;,&#39;life is too long, i dislike python&#39;])</span><br><span class="line">    print(cv.get_feature_names())</span><br><span class="line">    # print(cv.inverse_transform(data))</span><br><span class="line">    print(data.toarray())</span><br><span class="line">    return None</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">if __name__ &#x3D;&#x3D; &#39;__main__&#39;:</span><br><span class="line">    countvec()</span><br></pre></td></tr></table></figure>
+![英文文本特征抽取](<em>v</em>images/20191109113230665_11637.png =600x)</li>
+</ol>
+<ul>
+<li>统计所有文章当中所有的词，重复的只看做一次</li>
+<li>对每篇文章，在词的列表里面进行统计每个词出现的<strong>次数</strong></li>
+<li>单个字母不统计</li>
+</ul>
+<ol start="2">
+<li>中文文本</li>
+</ol>
+<ul>
+<li>需要对中文进行分词才能详细的进行特征值化</li>
+<li>不支持单个中文字</li>
+<li>使用 <strong>jieba</strong>这个模块 - jieba.cut(‘我是一个好程序员’)</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> jieba</span><br><span class="line"><span class="keyword">from</span> sklearn.feature_extraction.text <span class="keyword">import</span> CountVectorizer</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">cutword</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    中文字分割</span></span><br><span class="line"><span class="string">    :return: c1, c2, c3</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    con1 = jieba.cut(<span class="string">'今天很残酷，明天更残酷，后天很美好，'</span></span><br><span class="line">                     <span class="string">'但绝对大多数是死在明天晚上，所以每个人不要放弃今天'</span>)</span><br><span class="line">    con2 = jieba.cut(<span class="string">'我们看到的从很远星系来的光是在几百万年前发出的，'</span></span><br><span class="line">                     <span class="string">'这样当我们看到宇宙时，我们是在看它的过去'</span>)</span><br><span class="line">    con3 = jieba.cut(<span class="string">'如果只用一种方式了解某样事物，你就不会真正的了解它。'</span></span><br><span class="line">                     <span class="string">'了解事物真正含义的秘密取决于如何将其与我们所了解的事物相联系'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 转换成列表</span></span><br><span class="line">    content1 = list(con1)</span><br><span class="line">    content2 = list(con2)</span><br><span class="line">    content3 = list(con3)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 把列表转换成字符串</span></span><br><span class="line">    <span class="comment"># join(iterable) 以指定字符串作为分隔符，将content1中所有元素合并成一个新的字符串</span></span><br><span class="line">    c1 = <span class="string">' '</span>.join(content1)</span><br><span class="line">    c2 = <span class="string">' '</span>.join(content2)</span><br><span class="line">    c3 = <span class="string">' '</span>.join(content3)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> c1, c2, c3</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hanzivec</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    中文特征值化</span></span><br><span class="line"><span class="string">    :return: None</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    c1, c2, c3 = cutword()</span><br><span class="line">    cv = CountVectorizer()  <span class="comment"># 实例化</span></span><br><span class="line">    data = cv.fit_transform([c1, c2, c3])</span><br><span class="line">    print(cv.get_feature_names())</span><br><span class="line">    print(data.toarray())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    hanzivec()</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+<h3 id="文本特征抽取（语义"><a href="#文本特征抽取（语义" class="headerlink" title="文本特征抽取（语义)"></a>文本特征抽取（语义)</h3><ol>
+<li>tf - idf (tf * idf) 重要性程度</li>
+</ol>
+<ul>
+<li>tf: term frequency (词的频率）</li>
+<li>idf: inverse document frequency (逆文档频率）  log(总文档数量/该词出现的文档数量）</li>
+</ul>
+<ol start="2">
+<li><p>TF-IDF: 如果某个词或者短语在一篇文章中出现的概率高，并且在其他文章中很少出现，则认为此词或短语具有很好的类别区分能力，适合用来分类。</p>
+</li>
+<li><p>sklearn.feature_extraction.text.TfidfVectorizer<br>![TfidfVectorizer语法](<em>v</em>images/20191109131526973_6544.png =500x)</p>
+</li>
+</ol>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> jieba</span><br><span class="line"><span class="keyword">from</span> sklearn.feature_extraction.text <span class="keyword">import</span> TfidfVectorizer</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">cutword</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    中文字分割</span></span><br><span class="line"><span class="string">    :return: c1, c2, c3</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    con1 = jieba.cut(<span class="string">'今天很残酷，明天更残酷，后天很美好，'</span></span><br><span class="line">                     <span class="string">'但绝对大多数是死在明天晚上，所以每个人不要放弃今天'</span>)</span><br><span class="line">    con2 = jieba.cut(<span class="string">'我们看到的从很远星系来的光是在几百万年前发出的，'</span></span><br><span class="line">                     <span class="string">'这样当我们看到宇宙时，我们是在看它的过去'</span>)</span><br><span class="line">    con3 = jieba.cut(<span class="string">'如果只用一种方式了解某样事物，你就不会真正的了解它。'</span></span><br><span class="line">                     <span class="string">'了解事物真正含义的秘密取决于如何将其与我们所了解的事物相联系'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 转换成列表</span></span><br><span class="line">    content1 = list(con1)</span><br><span class="line">    content2 = list(con2)</span><br><span class="line">    content3 = list(con3)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 把列表转换成字符串</span></span><br><span class="line">    <span class="comment"># join(iterable) 以指定字符串作为分隔符，将content1中所有元素合并成一个新的字符串</span></span><br><span class="line">    c1 = <span class="string">' '</span>.join(content1)</span><br><span class="line">    c2 = <span class="string">' '</span>.join(content2)</span><br><span class="line">    c3 = <span class="string">' '</span>.join(content3)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> c1, c2, c3</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">hanzivec</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    中文特征值化</span></span><br><span class="line"><span class="string">    :return: None</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    c1, c2, c3 = cutword()</span><br><span class="line">    tf = TfidfVectorizer()  <span class="comment"># 实例化</span></span><br><span class="line">    data = tf.fit_transform([c1, c2, c3])</span><br><span class="line">    print(tf.get_feature_names())</span><br><span class="line">    print(data.toarray())</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    hanzivec()</span><br></pre></td></tr></table></figure>
 
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/01/01/02%20%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B%E5%92%8C%E6%96%87%E6%9C%AC%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/03%20%E6%95%B0%E6%8D%AE%E7%89%B9%E5%BE%81%E9%A2%84%E5%A4%84%E7%90%86/" class="archive-article-date">
-  	<time datetime="2020-01-01T08:53:13.651Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2020/01/01/01%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%BB%8B%E7%BB%8D/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          01 机器学习介绍
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/01/01/03%20%E6%95%B0%E6%8D%AE%E7%89%B9%E5%BE%81%E9%A2%84%E5%A4%84%E7%90%86/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">03 数据特征预处理</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/03%20%E6%95%B0%E6%8D%AE%E7%89%B9%E5%BE%81%E9%A2%84%E5%A4%84%E7%90%86/">03 数据特征预处理</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/04%20%E6%95%B0%E6%8D%AE%E9%99%8D%E7%BB%B4/" class="archive-article-date">
-  	<time datetime="2020-01-01T08:53:13.641Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/04%20%E6%95%B0%E6%8D%AE%E9%99%8D%E7%BB%B4/">04 数据降维</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/05%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/" class="archive-article-date">
-  	<time datetime="2020-01-01T08:53:13.630Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/05%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/">05 机器学习开发流程</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/06%20k-%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2020-01-01T08:53:13.620Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/06%20k-%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95/">06 k-近邻算法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/07%20%E6%9C%B4%E7%B4%A0%E5%8F%B6%E8%B4%9D%E6%96%AF%E7%AE%97%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2020-01-01T08:53:13.606Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/07%20%E6%9C%B4%E7%B4%A0%E5%8F%B6%E8%B4%9D%E6%96%AF%E7%AE%97%E6%B3%95/">07 朴素叶贝斯算法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/08%20%E5%86%B3%E7%AD%96%E6%A0%91%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97/" class="archive-article-date">
-  	<time datetime="2020-01-01T08:53:13.599Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/08%20%E5%86%B3%E7%AD%96%E6%A0%91%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97/">08 决策树与随机森林</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/S1_%E5%88%86%E7%B1%BB%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/" class="archive-article-date">
-  	<time datetime="2020-01-01T08:53:13.597Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/S1_%E5%88%86%E7%B1%BB%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/">S1_分类算法总结</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/09%20%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8A%E7%9F%A9%E9%98%B5%E8%BF%90%E7%AE%97/" class="archive-article-date">
-  	<time datetime="2020-01-01T08:53:13.595Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/09%20%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8A%E7%9F%A9%E9%98%B5%E8%BF%90%E7%AE%97/">09 线性回归及矩阵运算</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2020/01/page/2/">2</a><a class="extend next" rel="next" href="/archives/2020/01/page/2/">Next &amp;raquo;</a>
-    </nav>
   
 
 
@@ -462,8 +416,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

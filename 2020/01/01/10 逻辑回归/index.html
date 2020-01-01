@@ -6,15 +6,28 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/1 | Hexo</title>
+  <title>10 逻辑回归 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2020/01/index.html">
+  <meta name="description" content="10 逻辑回归分类算法-逻辑回归应用场景 （二分类） 广告点击率  （典型的二分类问题，点了或者没点，也能得出） 是否为垃圾邮件 是否患病 金融诈骗 虚假账号  逻辑回归定义 逻辑回归： 是一种分类算法，使用线性回归的式子作为输入，通过sigmoid函数转换为概率问题。  sigmoid函数：1&#x2F;（1+e^-x), 将输入值x,映射到（0，1), 与概率值联系起来  逻辑回归公式线性回归的输入 –">
+<meta property="og:type" content="article">
+<meta property="og:title" content="10 逻辑回归">
+<meta property="og:url" content="http://yoursite.com/2020/01/01/10%20%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="10 逻辑回归分类算法-逻辑回归应用场景 （二分类） 广告点击率  （典型的二分类问题，点了或者没点，也能得出） 是否为垃圾邮件 是否患病 金融诈骗 虚假账号  逻辑回归定义 逻辑回归： 是一种分类算法，使用线性回归的式子作为输入，通过sigmoid函数转换为概率问题。  sigmoid函数：1&#x2F;（1+e^-x), 将输入值x,映射到（0，1), 与概率值联系起来  逻辑回归公式线性回归的输入 –">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2020/01/01/10%20%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/_v_images/20191201221451644_26701.png">
+<meta property="og:image" content="http://yoursite.com/2020/01/01/10%20%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/_v_images/20191201221712772_21861.png">
+<meta property="og:image" content="http://yoursite.com/2020/01/01/10%20%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/_v_images/20191201222322877_26499.png">
+<meta property="og:image" content="http://yoursite.com/2020/01/01/10%20%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/_v_images/20191201223335896_232.png">
+<meta property="og:image" content="http://yoursite.com/2020/01/01/10%20%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/_v_images/20191201223724626_29104.png">
+<meta property="og:image" content="http://yoursite.com/2020/01/01/10%20%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/_v_images/20191202224637471_27548.png">
+<meta property="og:image" content="http://yoursite.com/2020/01/01/10%20%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/_v_images/20191202225737910_10950.png">
+<meta property="og:image" content="http://yoursite.com/2020/01/01/10%20%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/_v_images/20191203211608140_31158.png">
+<meta property="article:published_time" content="2020-01-01T08:53:13.587Z">
+<meta property="article:modified_time" content="2019-12-03T13:17:36.423Z">
 <meta property="article:author" content="Hello Lake">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/01/01/10%20%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/_v_images/20191201221451644_26701.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,295 +163,218 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-10 逻辑回归" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      10 逻辑回归
+    </h1>
+  
+
+        
+        <a href="/2020/01/01/10%20%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/" class="archive-article-date">
+  	<time datetime="2020-01-01T08:53:13.587Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
+</a>
+        
+      </header>
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="10-逻辑回归"><a href="#10-逻辑回归" class="headerlink" title="10 逻辑回归"></a>10 逻辑回归</h1><h2 id="分类算法-逻辑回归"><a href="#分类算法-逻辑回归" class="headerlink" title="分类算法-逻辑回归"></a>分类算法-逻辑回归</h2><h3 id="应用场景-（二分类）"><a href="#应用场景-（二分类）" class="headerlink" title="应用场景 （二分类）"></a>应用场景 （二分类）</h3><ul>
+<li>广告点击率  （典型的二分类问题，点了或者没点，也能得出）</li>
+<li>是否为垃圾邮件</li>
+<li>是否患病</li>
+<li>金融诈骗</li>
+<li>虚假账号</li>
+</ul>
+<h3 id="逻辑回归定义"><a href="#逻辑回归定义" class="headerlink" title="逻辑回归定义"></a>逻辑回归定义</h3><ol>
+<li><p>逻辑回归： 是一种分类算法，使用线性回归的式子作为输入，通过sigmoid函数转换为概率问题。</p>
+</li>
+<li><p>sigmoid函数：1/（1+e^-x), 将输入值x,映射到（0，1), 与概率值联系起来<br><img src="_v_images/20191201221451644_26701.png" alt=""></p>
+</li>
+<li><p>逻辑回归公式<br><img src="_v_images/20191201221712772_21861.png" alt=""><br>线性回归的输入 –&gt; sigmoid 转换 –&gt;分类 [0,1] 概率值， 阈值一般取0.5</p>
+</li>
+<li><p>逻辑回归的损失函数、优化</p>
+</li>
+</ol>
+<ul>
+<li>与线性回归原理相同，但由于是分类问题，损失函数不一样，只能通过梯度下降求解</li>
+<li>对数似然损失函数：<br><img src="_v_images/20191201222322877_26499.png" alt=""></li>
+</ul>
+<p>y =1， 目标值为1 ，预测值为1的概率是100%， 则损失最小（接近0）<br><strong>注： 哪一类别数据量小，则哪一种特征为正例1</strong></p>
+<p><img src="_v_images/20191201223335896_232.png" alt=""></p>
+<p>目标值是0类，预测1类的概率越大，则损失越大。（预测属于0的概率越大越好）<br><strong>只判断属于一个类别的概率，这里是属于1的概率，如果属于1的概率较小（小于阈值），则非1，即为0。</strong><br><img src="_v_images/20191201223724626_29104.png" alt=""></p>
+<ul>
+<li>完整损失函数举例：（损失越小，精度越高）<br><img src="_v_images/20191202224637471_27548.png" alt=""></li>
+</ul>
+<h3 id="损失函数"><a href="#损失函数" class="headerlink" title="损失函数"></a>损失函数</h3><h4 id="均方误差"><a href="#均方误差" class="headerlink" title="均方误差"></a>均方误差</h4><ul>
+<li>只有一个最小值，不存在多个局部最低点</li>
+</ul>
+<h4 id="对数似然函数"><a href="#对数似然函数" class="headerlink" title="对数似然函数"></a>对数似然函数</h4><ul>
+<li>多个局部最小值，使用梯度下降时，会存在问题，尽管没有全局最低点，但效果还可以。</li>
+<li>改善方法：<ul>
+<li>随机初始化，多次比较最小值结果</li>
+<li>求解过程中，调整学习率<br><img src="_v_images/20191202225737910_10950.png" alt=""></li>
+</ul>
+</li>
+</ul>
+<h2 id="逻辑回归案例"><a href="#逻辑回归案例" class="headerlink" title="逻辑回归案例"></a>逻辑回归案例</h2><p>良/恶性乳腺癌数据</p>
+<ul>
+<li><p>原始数据的下载地址：<br><a href="https://archive.ics.uci.edu/ml/machine-learning-databases/" target="_blank" rel="noopener">https://archive.ics.uci.edu/ml/machine-learning-databases/</a></p>
+</li>
+<li><p>数据描述<br>（1）699条样本，共11列数据，第一列用语检索的id，后9列分别是与肿瘤<br>相关的医学特征，最后一列表示肿瘤类型的数值。<br>（2）包含16个缺失值，用”?”标出。</p>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LinearRegression, SGDRegressor, Ridge, LogisticRegression</span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line"><span class="keyword">from</span> sklearn.preprocessing <span class="keyword">import</span> StandardScaler</span><br><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> mean_squared_error, classification_report</span><br><span class="line"><span class="keyword">from</span> sklearn.externals <span class="keyword">import</span> joblib</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"><span class="keyword">import</span> numpy <span class="keyword">as</span> np</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">logistic</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    逻辑回归做二分类癌症预测</span></span><br><span class="line"><span class="string">    :return: None</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="comment"># 1.读取数据</span></span><br><span class="line">    <span class="comment"># 构造列标签名字</span></span><br><span class="line">    column = [<span class="string">'Sample code number'</span>,<span class="string">'Clump Thickness'</span>, <span class="string">'Uniformity of Cell Size'</span>,<span class="string">'Uniformity of Cell Shape'</span>,<span class="string">'Marginal Adhesion'</span>,<span class="string">'Single Epithelial Cell Size'</span>,<span class="string">'Bare Nuclei'</span>,<span class="string">'Bland Chromatin'</span>,<span class="string">'Normal Nucleoli'</span>,<span class="string">'Mitoses'</span>,<span class="string">'Class'</span>]</span><br><span class="line">    data = pd.read_csv(<span class="string">'https://archive.ics.uci.edu/ml/machine-learning-databases/breast-cancer-wisconsin/breast-cancer-wisconsin.data'</span>, names=column)</span><br><span class="line">    print(data)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 2.缺失值处理</span></span><br><span class="line">    data = data.replace(to_replace=<span class="string">'?'</span>, value=np.nan)</span><br><span class="line">    data = data.dropna() <span class="comment"># 直接删除nan</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 3. 进行数据分割</span></span><br><span class="line">    x_train, x_test, y_train, y_test = train_test_split(data[column[<span class="number">1</span>:<span class="number">10</span>]], data[column[<span class="number">10</span>]], test_size=<span class="number">0.25</span>) <span class="comment"># 取特征值，目标值</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 4.标准化处理 (分类问题，目标值不做标准化）</span></span><br><span class="line">    std = StandardScaler()</span><br><span class="line">    x_train = std.fit_transform(x_train)</span><br><span class="line">    x_test = std.transform(x_test)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 5. 逻辑回归预测</span></span><br><span class="line">    lg = LogisticRegression(C=<span class="number">1.0</span>)</span><br><span class="line">    lg.fit(x_train, y_train) <span class="comment"># 训练lg模型</span></span><br><span class="line">    print(lg.coef_)</span><br><span class="line">    y_predict = lg.predict(x_test)</span><br><span class="line">    print(<span class="string">'准确率：'</span>, lg.score(x_test, y_test))</span><br><span class="line">    print(<span class="string">'召回率:'</span>,classification_report(y_test, y_predict, labels=[<span class="number">2</span>,<span class="number">4</span>], target_names=[<span class="string">'良性'</span>,<span class="string">'恶性'</span>]))</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    logistic()</span><br></pre></td></tr></table></figure>
+
+<h2 id="逻辑回归总结"><a href="#逻辑回归总结" class="headerlink" title="逻辑回归总结"></a>逻辑回归总结</h2><ol>
+<li>应用：广告点击率预测，是否患病，金融诈骗，是否为虚假账号 （带有概率的二分类问题）</li>
+<li>优点：适合需要得到一个分类概率的场景，简单，速度快</li>
+<li>缺点：不方便处理多分类问题 1 vs 1, 1 vs </li>
+</ol>
+<h3 id="生成模型与判别模型比较"><a href="#生成模型与判别模型比较" class="headerlink" title="生成模型与判别模型比较"></a>生成模型与判别模型比较</h3><ul>
+<li>有没有先验概率     ( P(C) ) 需不需要总结历史数据<br><img src="_v_images/20191203211608140_31158.png" alt=""></li>
+</ul>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/01%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%BB%8B%E7%BB%8D/" class="archive-article-date">
-  	<time datetime="2020-01-01T08:53:13.655Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/01%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%BB%8B%E7%BB%8D/">01 机器学习介绍</a>
-    </h1>
-  
+      
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/01/01/10%20%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/02%20%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B%E5%92%8C%E6%96%87%E6%9C%AC%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96/" class="archive-article-date">
-  	<time datetime="2020-01-01T08:53:13.653Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2020/01/01/09%20%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8A%E7%9F%A9%E9%98%B5%E8%BF%90%E7%AE%97/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          09 线性回归及矩阵运算
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/01/01/11%20K-Means%E5%8E%9F%E7%90%86%E5%8F%8A%E6%A1%88%E4%BE%8B/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">11 K-Means原理及案例</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/02%20%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B%E5%92%8C%E6%96%87%E6%9C%AC%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96/">02 特征工程和文本特征提取</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/03%20%E6%95%B0%E6%8D%AE%E7%89%B9%E5%BE%81%E9%A2%84%E5%A4%84%E7%90%86/" class="archive-article-date">
-  	<time datetime="2020-01-01T08:53:13.651Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/03%20%E6%95%B0%E6%8D%AE%E7%89%B9%E5%BE%81%E9%A2%84%E5%A4%84%E7%90%86/">03 数据特征预处理</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/04%20%E6%95%B0%E6%8D%AE%E9%99%8D%E7%BB%B4/" class="archive-article-date">
-  	<time datetime="2020-01-01T08:53:13.641Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/04%20%E6%95%B0%E6%8D%AE%E9%99%8D%E7%BB%B4/">04 数据降维</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/05%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/" class="archive-article-date">
-  	<time datetime="2020-01-01T08:53:13.630Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/05%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/">05 机器学习开发流程</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/06%20k-%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2020-01-01T08:53:13.620Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/06%20k-%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95/">06 k-近邻算法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/07%20%E6%9C%B4%E7%B4%A0%E5%8F%B6%E8%B4%9D%E6%96%AF%E7%AE%97%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2020-01-01T08:53:13.606Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/07%20%E6%9C%B4%E7%B4%A0%E5%8F%B6%E8%B4%9D%E6%96%AF%E7%AE%97%E6%B3%95/">07 朴素叶贝斯算法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/08%20%E5%86%B3%E7%AD%96%E6%A0%91%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97/" class="archive-article-date">
-  	<time datetime="2020-01-01T08:53:13.599Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/08%20%E5%86%B3%E7%AD%96%E6%A0%91%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97/">08 决策树与随机森林</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/S1_%E5%88%86%E7%B1%BB%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/" class="archive-article-date">
-  	<time datetime="2020-01-01T08:53:13.597Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/S1_%E5%88%86%E7%B1%BB%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/">S1_分类算法总结</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/09%20%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8A%E7%9F%A9%E9%98%B5%E8%BF%90%E7%AE%97/" class="archive-article-date">
-  	<time datetime="2020-01-01T08:53:13.595Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/09%20%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8A%E7%9F%A9%E9%98%B5%E8%BF%90%E7%AE%97/">09 线性回归及矩阵运算</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2020/01/page/2/">2</a><a class="extend next" rel="next" href="/archives/2020/01/page/2/">Next &amp;raquo;</a>
-    </nav>
   
 
 
@@ -462,8 +398,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

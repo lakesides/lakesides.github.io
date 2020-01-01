@@ -6,15 +6,28 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/1 | Hexo</title>
+  <title>09 线性回归及矩阵运算 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2020/01/index.html">
+  <meta name="description" content="09 线性回归及矩阵运算线性回归 定义：通过一个或者多个自变量与因变量之间进行建模的回归分析。其中可以为一个或者多个自变量之间的线性组合。  一元线性回归：涉及到的变量只有一个 多元线性回归：变量两个或以上  通用公式：h(w) &#x3D; w0 + w1x1 + w2x2 + ….&#x3D; wTx 其中w,x 为矩阵：wT&#x3D;(w0, w1, w2)          x&#x3D;（1，x1, x2)T  回归的应用场">
+<meta property="og:type" content="article">
+<meta property="og:title" content="09 线性回归及矩阵运算">
+<meta property="og:url" content="http://yoursite.com/2020/01/01/09%20%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8A%E7%9F%A9%E9%98%B5%E8%BF%90%E7%AE%97/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="09 线性回归及矩阵运算线性回归 定义：通过一个或者多个自变量与因变量之间进行建模的回归分析。其中可以为一个或者多个自变量之间的线性组合。  一元线性回归：涉及到的变量只有一个 多元线性回归：变量两个或以上  通用公式：h(w) &#x3D; w0 + w1x1 + w2x2 + ….&#x3D; wTx 其中w,x 为矩阵：wT&#x3D;(w0, w1, w2)          x&#x3D;（1，x1, x2)T  回归的应用场">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2020/01/01/09%20%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8A%E7%9F%A9%E9%98%B5%E8%BF%90%E7%AE%97/_v_images/20191130213530914_28629.png">
+<meta property="og:image" content="http://yoursite.com/2020/01/01/09%20%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8A%E7%9F%A9%E9%98%B5%E8%BF%90%E7%AE%97/_v_images/20191130215045165_17936.png">
+<meta property="og:image" content="http://yoursite.com/2020/01/01/09%20%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8A%E7%9F%A9%E9%98%B5%E8%BF%90%E7%AE%97/_v_images/20191201111330769_30551.png">
+<meta property="og:image" content="http://yoursite.com/2020/01/01/09%20%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8A%E7%9F%A9%E9%98%B5%E8%BF%90%E7%AE%97/_v_images/20191130215738419_22849.png">
+<meta property="og:image" content="http://yoursite.com/2020/01/01/09%20%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8A%E7%9F%A9%E9%98%B5%E8%BF%90%E7%AE%97/_v_images/20191201104709407_24514.png">
+<meta property="og:image" content="http://yoursite.com/2020/01/01/09%20%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8A%E7%9F%A9%E9%98%B5%E8%BF%90%E7%AE%97/_v_images/20191201121705080_20502.png">
+<meta property="og:image" content="http://yoursite.com/2020/01/01/09%20%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8A%E7%9F%A9%E9%98%B5%E8%BF%90%E7%AE%97/_v_images/20191201122818536_12857.png">
+<meta property="og:image" content="http://yoursite.com/2020/01/01/09%20%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8A%E7%9F%A9%E9%98%B5%E8%BF%90%E7%AE%97/_v_images/20191201123732379_8918.png">
+<meta property="article:published_time" content="2020-01-01T08:53:13.595Z">
+<meta property="article:modified_time" content="2019-12-01T12:56:12.449Z">
 <meta property="article:author" content="Hello Lake">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/01/01/09%20%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8A%E7%9F%A9%E9%98%B5%E8%BF%90%E7%AE%97/_v_images/20191130213530914_28629.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,295 +163,311 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-09 线性回归及矩阵运算" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/01%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%BB%8B%E7%BB%8D/" class="archive-article-date">
-  	<time datetime="2020-01-01T08:53:13.655Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/01%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%BB%8B%E7%BB%8D/">01 机器学习介绍</a>
+    <h1 class="article-title" itemprop="name">
+      09 线性回归及矩阵运算
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/02%20%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B%E5%92%8C%E6%96%87%E6%9C%AC%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96/" class="archive-article-date">
-  	<time datetime="2020-01-01T08:53:13.653Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/02%20%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B%E5%92%8C%E6%96%87%E6%9C%AC%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96/">02 特征工程和文本特征提取</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/03%20%E6%95%B0%E6%8D%AE%E7%89%B9%E5%BE%81%E9%A2%84%E5%A4%84%E7%90%86/" class="archive-article-date">
-  	<time datetime="2020-01-01T08:53:13.651Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/03%20%E6%95%B0%E6%8D%AE%E7%89%B9%E5%BE%81%E9%A2%84%E5%A4%84%E7%90%86/">03 数据特征预处理</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/04%20%E6%95%B0%E6%8D%AE%E9%99%8D%E7%BB%B4/" class="archive-article-date">
-  	<time datetime="2020-01-01T08:53:13.641Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/04%20%E6%95%B0%E6%8D%AE%E9%99%8D%E7%BB%B4/">04 数据降维</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/05%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/" class="archive-article-date">
-  	<time datetime="2020-01-01T08:53:13.630Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/05%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/">05 机器学习开发流程</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/06%20k-%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2020-01-01T08:53:13.620Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/06%20k-%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95/">06 k-近邻算法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/07%20%E6%9C%B4%E7%B4%A0%E5%8F%B6%E8%B4%9D%E6%96%AF%E7%AE%97%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2020-01-01T08:53:13.606Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/07%20%E6%9C%B4%E7%B4%A0%E5%8F%B6%E8%B4%9D%E6%96%AF%E7%AE%97%E6%B3%95/">07 朴素叶贝斯算法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/08%20%E5%86%B3%E7%AD%96%E6%A0%91%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97/" class="archive-article-date">
-  	<time datetime="2020-01-01T08:53:13.599Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/08%20%E5%86%B3%E7%AD%96%E6%A0%91%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97/">08 决策树与随机森林</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/S1_%E5%88%86%E7%B1%BB%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/" class="archive-article-date">
-  	<time datetime="2020-01-01T08:53:13.597Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/S1_%E5%88%86%E7%B1%BB%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/">S1_分类算法总结</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/09%20%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8A%E7%9F%A9%E9%98%B5%E8%BF%90%E7%AE%97/" class="archive-article-date">
+        
+        <a href="/2020/01/01/09%20%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8A%E7%9F%A9%E9%98%B5%E8%BF%90%E7%AE%97/" class="archive-article-date">
   	<time datetime="2020-01-01T08:53:13.595Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/09%20%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8A%E7%9F%A9%E9%98%B5%E8%BF%90%E7%AE%97/">09 线性回归及矩阵运算</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="09-线性回归及矩阵运算"><a href="#09-线性回归及矩阵运算" class="headerlink" title="09 线性回归及矩阵运算"></a>09 线性回归及矩阵运算</h1><h2 id="线性回归"><a href="#线性回归" class="headerlink" title="线性回归"></a>线性回归</h2><ol>
+<li><p>定义：通过一个或者多个自变量与因变量之间进行建模的回归分析。其中可以为一个或者多个自变量之间的线性组合。</p>
+</li>
+<li><p>一元线性回归：涉及到的变量只有一个<br> 多元线性回归：变量两个或以上</p>
+</li>
+<li><p>通用公式：h(w) = w0 + w1x1 + w2x2 + ….= wTx</p>
+<pre><code>其中w,x 为矩阵：wT=(w0, w1, w2)          x=（1，x1, x2)T</code></pre></li>
+</ol>
+<h3 id="回归的应用场景-（连续型数据）"><a href="#回归的应用场景-（连续型数据）" class="headerlink" title="回归的应用场景 （连续型数据）"></a>回归的应用场景 （连续型数据）</h3><ol>
+<li>房价预测</li>
+<li>销售额预测 （广告，研发成本，规模等因素）</li>
+<li>贷款额度</li>
+</ol>
+<h3 id="线性关系模型"><a href="#线性关系模型" class="headerlink" title="线性关系模型"></a>线性关系模型</h3><ol>
+<li>定义： 通过属性 (特征) 的线性组合来进行预测的函数：<ul>
+<li>f(x) = w1x1 + w2x2 + w3x3 + …… + wdxd + b</li>
+<li>w : weight (权重） b: bias (偏置项） </li>
+<li>多个特征： (w1:房子的面积， w2:房子的位置 ..)</li>
+</ul>
+</li>
+</ol>
+<h3 id="损失函数（误差）"><a href="#损失函数（误差）" class="headerlink" title="损失函数（误差）"></a>损失函数（误差）</h3><ol>
+<li>《统计学习方法》 - 算法 ，策略， 优化</li>
+</ol>
+<ul>
+<li>线性回归， 最小二乘法，正规方程 &amp; 梯度下降</li>
+</ul>
+<ol start="2">
+<li>损失函数（误差大小）</li>
+</ol>
+<ul>
+<li>yi 为第i个训练样本的真实值</li>
+<li>hw(xi)为第i个训练样本特征值组合预测函数 （预测值）<br><img src="_v_images/20191130213530914_28629.png" alt=""></li>
+</ul>
+<ol start="3">
+<li><p>寻找最优化的w</p>
+<ol>
+<li><p>最小二乘法之<strong>正规方程</strong>  （直接求解到最小值，特征复杂时可能没办法求解）</p>
+<ul>
+<li>求解：w= (xTx）-1 xTy</li>
+<li>X 为特征值矩阵，y为目标值矩阵    </li>
+<li>缺点: 特征过于复杂时，求解速度慢<br><img src="_v_images/20191130215045165_17936.png" alt=""></li>
+</ul>
+</li>
+<li><p>最小二乘法之<strong>梯度下降</strong><br><img src="_v_images/20191201111330769_30551.png" alt="">      </p>
+<ul>
+<li>使用场景：面对训练数据规模庞大的任务</li>
+<li>超参数：a<br><img src="_v_images/20191130215738419_22849.png" alt=""></li>
+</ul>
+</li>
+</ol>
+</li>
+</ol>
+<h2 id="线性回归算法案例"><a href="#线性回归算法案例" class="headerlink" title="线性回归算法案例"></a>线性回归算法案例</h2><h3 id="API"><a href="#API" class="headerlink" title="API"></a>API</h3><ol>
+<li>sklearn.linear_model.LinealRegression()</li>
+</ol>
+<ul>
+<li>普通最小二乘法线性回归</li>
+<li>coef_: 回归系数   （w值)</li>
+</ul>
+<ol start="2">
+<li>sklearn.linear_model.SGDRegressir()</li>
+</ol>
+<ul>
+<li>通过使用SGD最小化线性模型</li>
+<li>coef_: 回归系数</li>
+<li>不能手动指定学习率</li>
+</ul>
+<h3 id="波士顿房价预测"><a href="#波士顿房价预测" class="headerlink" title="波士顿房价预测"></a>波士顿房价预测</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.datasets <span class="keyword">import</span> load_boston</span><br><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LinearRegression, SGDRegressor</span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line"><span class="keyword">from</span> sklearn.preprocessing <span class="keyword">import</span> StandardScaler</span><br><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> mean_squared_error</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">mylinear</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    线性回归预测房价</span></span><br><span class="line"><span class="string">    :return: None</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="comment"># 1. 获取数据</span></span><br><span class="line">    lb = load_boston()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 2. 分割数据集到训练集和测试集</span></span><br><span class="line">    x_train, x_test, y_train, y_test = train_test_split(lb.data, lb.target, test_size=<span class="number">0.25</span>)</span><br><span class="line">    print(y_train, y_test)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 3. 进行标准化处理(特征值和目标值都必须标准化处理）</span></span><br><span class="line">    <span class="comment"># 实例化两个标准化API,特征值和目标值要用各自fit</span></span><br><span class="line">    <span class="comment"># 特征值</span></span><br><span class="line">    std_x = StandardScaler()</span><br><span class="line">    x_train = std_x.fit_transform(x_train)</span><br><span class="line">    x_test = std_x.transform(x_test)</span><br><span class="line"></span><br><span class="line">    std_y = StandardScaler()</span><br><span class="line">    y_train = std_y.fit_transform(y_train)</span><br><span class="line">    y_test = std_y.transform(y_test)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 4. estimator预测</span></span><br><span class="line">    <span class="comment"># 4.1 正规方程求解预测结果</span></span><br><span class="line">    lr = LinearRegression()</span><br><span class="line">    lr.fit(x_train, y_train)</span><br><span class="line">    print(lr.coef_)</span><br><span class="line">    y_lr_predict = std_y.inverse_transform(lr.predict(x_test))</span><br><span class="line">    print(<span class="string">'正规方程测试集里面每个房子的预测价格：'</span>, y_lr_predict)</span><br><span class="line">    print(<span class="string">'正规方程的均方误差：'</span>,mean_squared_error(std_y.inverse_transform(y_test),y_lr_predict))</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 4.1 梯度下降进行梯度预测</span></span><br><span class="line">    sgd = SGDRegressor()</span><br><span class="line">    lr.fit(x_train, y_train)</span><br><span class="line">    print(sgd.coef_)</span><br><span class="line">    y_sgd_predict = std_y.inverse_transform(sgd.predict(x_test))</span><br><span class="line">    print(<span class="string">'梯度下降测试集里面每个房子的预测价格：'</span>, y_sgd_predict)</span><br><span class="line">    print(<span class="string">'梯度下降的均方误差：'</span>, mean_squared_error(std_y.inverse_transform(y_test), y_sgd_predict))</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    mylinear()</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
+<h3 id="回归性能评估"><a href="#回归性能评估" class="headerlink" title="回归性能评估"></a>回归性能评估</h3><p>均方误差 （Mean Squared Error  MSE) 评价机制</p>
+<ul>
+<li>mean_squared_error(y_true, y_pred)</li>
+<li>真实值和预测值为标准化话之前的值<br><img src="_v_images/20191201104709407_24514.png" alt=""></li>
+</ul>
+<h3 id="两种预测方式的选择"><a href="#两种预测方式的选择" class="headerlink" title="两种预测方式的选择"></a>两种预测方式的选择</h3><ol>
+<li>样本量选择<br>样本量大于100K –&gt; SGD 梯度下降<br>样本量小于100K –&gt; 其他<br>![](<em>v</em>images/20191201105831243_23827.png =643x)</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th align="left">*<em>梯度下降   *</em></th>
+<th align="left">*<em>正规方程  *</em></th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">需要选择学习率</td>
+<td align="left">不需要</td>
+</tr>
+<tr>
+<td align="left">需要多次迭代</td>
+<td align="left">一次运算得出</td>
+</tr>
+<tr>
+<td align="left">当特征数量大时也能较好使用</td>
+<td align="left">需要计算（xTx）-1,运算量大</td>
+</tr>
+<tr>
+<td align="left">适用于各种类型的模型</td>
+<td align="left">只适用于线性模型</td>
+</tr>
+</tbody></table>
+<ol start="2">
+<li>特点：线性回归器是最为简单、易用的回归模型，在不知道特征之间关系的情况下，可以使用线性回归器作为大多数系统的首要选择。<em>LinearRegression 不能解决拟合问题。</em></li>
+</ol>
+<h2 id="过拟合与欠拟合"><a href="#过拟合与欠拟合" class="headerlink" title="过拟合与欠拟合"></a>过拟合与欠拟合</h2><ol>
+<li><p>定义： </p>
+<ol>
+<li><p>过拟合（overfitting)：一个假设在训练数据上能够获得比其他假设更好的拟合，但是在训练数据外却不能很好拟合。（模型过于复杂）<br>模型复杂的原因： 数据的特征和目标值之间的关系不仅仅是线性关系。</p>
+</li>
+<li><p>欠拟合（underfitting)：一个假设在训练数据上不能获得更好的拟合，但是在训练数据外也不能很好的拟合。 （模型过于简单）<br><img src="_v_images/20191201121705080_20502.png" alt=""></p>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="欠拟合原因及解决方法"><a href="#欠拟合原因及解决方法" class="headerlink" title="欠拟合原因及解决方法"></a>欠拟合原因及解决方法</h3><ol>
+<li>原因： 学习到的数据特征过少</li>
+<li>解决方法： 增加数据的特征数量</li>
+</ol>
+<h3 id="过拟合原因及解决方法"><a href="#过拟合原因及解决方法" class="headerlink" title="过拟合原因及解决方法"></a>过拟合原因及解决方法</h3><ol>
+<li>原因： 原始特征过多，存在一些嘈杂特征，模型过于复杂是因为模型尝试去兼顾各个测试数据点</li>
+<li>解决方法： <ul>
+<li>进行特征选择，消除关联性很大的特征（人为排除，很难做）</li>
+<li>交叉验证（让所有数据都有过训练）- 检验但不能解决</li>
+<li>正则化 ：不断尝试，减少权重（高次项特征的影响）</li>
+</ul>
+</li>
+<li>特征选择： <ul>
+<li>过滤式：低方差特征</li>
+<li>嵌入式：<strong>正则化</strong>，决策树，神经网络<br><img src="_v_images/20191201122818536_12857.png" alt=""><br>（减少高指数项系数，趋近于0，减少权重）</li>
+</ul>
+</li>
+</ol>
+<h3 id="L2正则化"><a href="#L2正则化" class="headerlink" title="L2正则化"></a>L2正则化</h3><ol>
+<li>作用：可以使得W的每个元素都很小，都接近于0</li>
+<li>优点：越小的参数说明模型越简单，越简单的模型越不容易产生过拟合现象。</li>
+<li>回归解决过拟合的方式：<br> L2正则化， Ridge：岭回归：带有正则化的线性回归，解决过拟合。</li>
+</ol>
+<h3 id="Ridge-API"><a href="#Ridge-API" class="headerlink" title="Ridge API"></a>Ridge API</h3><p>sklearn.linear_model.Ridge(alpha=1.0)<br>    - 具有L2正则化的线性最小二乘法<br>    - alpha: 正则化力度   0<del>1（小数）， 1</del>10（整数）<br>    - coef_: 回归系数</p>
+<p><strong>正则化力度对权重的影响 （力度越大，越趋向于0）</strong><br><img src="_v_images/20191201123732379_8918.png" alt=""></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.datasets <span class="keyword">import</span> load_boston</span><br><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LinearRegression, SGDRegressor, Ridge</span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line"><span class="keyword">from</span> sklearn.preprocessing <span class="keyword">import</span> StandardScaler</span><br><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> mean_squared_error</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">mylinear</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    线性回归预测房价</span></span><br><span class="line"><span class="string">    :return: None</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="comment"># 1. 获取数据</span></span><br><span class="line">    lb = load_boston()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 2. 分割数据集到训练集和测试集</span></span><br><span class="line">    x_train, x_test, y_train, y_test = train_test_split(lb.data, lb.target, test_size=<span class="number">0.25</span>)</span><br><span class="line">    print(y_train, y_test)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 3. 进行标准化处理(特征值和目标值都必须标准化处理）</span></span><br><span class="line">    <span class="comment"># 实例化两个标准化API,特征值和目标值要用各自fit</span></span><br><span class="line">    <span class="comment"># 特征值</span></span><br><span class="line">    std_x = StandardScaler()</span><br><span class="line">    x_train = std_x.fit_transform(x_train)</span><br><span class="line">    x_test = std_x.transform(x_test)</span><br><span class="line"></span><br><span class="line">    std_y = StandardScaler()</span><br><span class="line">    y_train = std_y.fit_transform(y_train)</span><br><span class="line">    y_test = std_y.transform(y_test)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 4. estimator预测</span></span><br><span class="line">    <span class="comment"># 4.1 正规方程求解预测结果</span></span><br><span class="line">    lr = LinearRegression()</span><br><span class="line">    lr.fit(x_train, y_train)</span><br><span class="line">    print(lr.coef_)</span><br><span class="line">    y_lr_predict = std_y.inverse_transform(lr.predict(x_test))</span><br><span class="line">    print(<span class="string">'正规方程测试集里面每个房子的预测价格：'</span>, y_lr_predict)</span><br><span class="line">    print(<span class="string">'正规方程的均方误差：'</span>,mean_squared_error(std_y.inverse_transform(y_test),y_lr_predict))</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 4.2 梯度下降进行梯度预测</span></span><br><span class="line">    sgd = SGDRegressor()</span><br><span class="line">    lr.fit(x_train, y_train)</span><br><span class="line">    print(sgd.coef_)</span><br><span class="line">    y_sgd_predict = std_y.inverse_transform(sgd.predict(x_test))</span><br><span class="line">    print(<span class="string">'梯度下降测试集里面每个房子的预测价格：'</span>, y_sgd_predict)</span><br><span class="line">    print(<span class="string">'梯度下降的均方误差：'</span>, mean_squared_error(std_y.inverse_transform(y_test), y_sgd_predict))</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 4.3 岭回归预测</span></span><br><span class="line">    rd = Ridge(alpha=<span class="number">1.0</span>)</span><br><span class="line">    rd.fit(x_train, y_train)</span><br><span class="line">    print(rd.coef_)</span><br><span class="line">    y_rd_predict = std_y.inverse_transform(rd.predict(x_test))</span><br><span class="line">    print(<span class="string">'岭回归测试集里面每个房子的预测价格：'</span>, y_rd_predict)</span><br><span class="line">    print(<span class="string">'岭回归的均方误差：'</span>, mean_squared_error(std_y.inverse_transform(y_test), y_rd_predict))</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    mylinear()</span><br></pre></td></tr></table></figure>
 
+<h3 id="线性回归LinearRegression-与-Ridge对比"><a href="#线性回归LinearRegression-与-Ridge对比" class="headerlink" title="线性回归LinearRegression 与 Ridge对比"></a>线性回归LinearRegression 与 Ridge对比</h3><p>岭回归：回归得到的回归系数更符合实际，更可靠。另外，能让估计参数的波动范围变小，变得更稳定。在存在病态数据偏多的研究中有较大的使用价值。</p>
+<h2 id="模型的保存与加载"><a href="#模型的保存与加载" class="headerlink" title="模型的保存与加载"></a>模型的保存与加载</h2><p>sklearn API<br>sklearn.Externals import joblib</p>
+<ul>
+<li>保存： joblib.dump(rf, ‘test.pkl’)  - 保存的实例和路径 ， rf - 训练生成的实例，文件格式为pkl</li>
+<li>加载： joblib.load( ‘test.pkl’) - 加载路径</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.datasets <span class="keyword">import</span> load_boston</span><br><span class="line"><span class="keyword">from</span> sklearn.linear_model <span class="keyword">import</span> LinearRegression, SGDRegressor, Ridge</span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line"><span class="keyword">from</span> sklearn.preprocessing <span class="keyword">import</span> StandardScaler</span><br><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> mean_squared_error</span><br><span class="line"><span class="keyword">from</span> sklearn.externals <span class="keyword">import</span> joblib</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">mylinear</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    线性回归预测房价</span></span><br><span class="line"><span class="string">    :return: None</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="comment"># 1. 获取数据</span></span><br><span class="line">    lb = load_boston()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 2. 分割数据集到训练集和测试集</span></span><br><span class="line">    x_train, x_test, y_train, y_test = train_test_split(lb.data, lb.target, test_size=<span class="number">0.25</span>)</span><br><span class="line">    print(y_train, y_test)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 3. 进行标准化处理(特征值和目标值都必须标准化处理）</span></span><br><span class="line">    <span class="comment"># 实例化两个标准化API,特征值和目标值要用各自fit</span></span><br><span class="line">    <span class="comment"># 特征值</span></span><br><span class="line">    std_x = StandardScaler()</span><br><span class="line">    x_train = std_x.fit_transform(x_train)</span><br><span class="line">    x_test = std_x.transform(x_test)</span><br><span class="line"></span><br><span class="line">    std_y = StandardScaler()</span><br><span class="line">    y_train = std_y.fit_transform(y_train)</span><br><span class="line">    y_test = std_y.transform(y_test)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 4. estimator预测</span></span><br><span class="line">    <span class="comment"># 4.1 正规方程求解预测结果</span></span><br><span class="line">    <span class="comment"># lr = LinearRegression()</span></span><br><span class="line">    <span class="comment"># lr.fit(x_train, y_train)</span></span><br><span class="line">    <span class="comment"># print(lr.coef_)</span></span><br><span class="line">    <span class="comment"># y_lr_predict = std_y.inverse_transform(lr.predict(x_test))</span></span><br><span class="line">    <span class="comment"># print('正规方程测试集里面每个房子的预测价格：', y_lr_predict)</span></span><br><span class="line">    <span class="comment"># print('正规方程的均方误差：',mean_squared_error(std_y.inverse_transform(y_test),y_lr_predict))</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 保存训练好的模型</span></span><br><span class="line">    joblib.dump(lr, <span class="string">'./test.pkl'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 导出模型</span></span><br><span class="line">    model = joblib.load(<span class="string">'./test.pkl'</span>)</span><br><span class="line">    y_predict = model.predict(x_test)</span><br><span class="line">    print(<span class="string">'保存的模型预测的结果：'</span>, y_predict)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># # 4.2 梯度下降进行梯度预测</span></span><br><span class="line">    <span class="comment"># sgd = SGDRegressor()</span></span><br><span class="line">    <span class="comment"># lr.fit(x_train, y_train)</span></span><br><span class="line">    <span class="comment"># print(sgd.coef_)</span></span><br><span class="line">    <span class="comment"># y_sgd_predict = std_y.inverse_transform(sgd.predict(x_test))</span></span><br><span class="line">    <span class="comment"># print('梯度下降测试集里面每个房子的预测价格：', y_sgd_predict)</span></span><br><span class="line">    <span class="comment"># print('梯度下降的均方误差：', mean_squared_error(std_y.inverse_transform(y_test), y_sgd_predict))</span></span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    <span class="comment"># # 4.3 岭回归预测</span></span><br><span class="line">    <span class="comment"># rd = Ridge(alpha=1.0)</span></span><br><span class="line">    <span class="comment"># rd.fit(x_train, y_train)</span></span><br><span class="line">    <span class="comment"># print(rd.coef_)</span></span><br><span class="line">    <span class="comment"># y_rd_predict = std_y.inverse_transform(rd.predict(x_test))</span></span><br><span class="line">    <span class="comment"># print('岭回归测试集里面每个房子的预测价格：', y_rd_predict)</span></span><br><span class="line">    <span class="comment"># print('岭回归的均方误差：', mean_squared_error(std_y.inverse_transform(y_test), y_rd_predict))</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    mylinear()</span><br></pre></td></tr></table></figure>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/01/01/09%20%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8A%E7%9F%A9%E9%98%B5%E8%BF%90%E7%AE%97/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+    <a href="/2020/01/01/S1_%E5%88%86%E7%B1%BB%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          S1_分类算法总结
+        
+      </div>
+    </a>
   
   
-    </div></section>
+    <a href="/2020/01/01/10%20%E9%80%BB%E8%BE%91%E5%9B%9E%E5%BD%92/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">10 逻辑回归</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2020/01/page/2/">2</a><a class="extend next" rel="next" href="/archives/2020/01/page/2/">Next &amp;raquo;</a>
-    </nav>
+  
+
+  
+
   
 
 
@@ -462,8 +491,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

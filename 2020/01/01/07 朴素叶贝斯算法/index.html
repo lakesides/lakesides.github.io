@@ -6,15 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/1 | Hexo</title>
+  <title>07 朴素叶贝斯算法 | Hexo</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/archives/2020/01/index.html">
+  <meta name="description" content="07 朴素叶贝斯算法概率基础 概率： 一件事情发生的可能性 联合概率： 包含多个条件，且所有条件同时成立的概率。P(A,B) P(A, B) &#x3D; P(A)P(B) 条件概率：事件A在另外一个事件B已经发生条件下发生的概率。 P(A|B) P(A1,A2 | B) &#x3D; P(A1 | B) * P(A2 | B) 注意： 此条件概率的成立，是由于A1, A2相互独立的结果  朴素贝叶斯 朴素： 特征独">
+<meta property="og:type" content="article">
+<meta property="og:title" content="07 朴素叶贝斯算法">
+<meta property="og:url" content="http://yoursite.com/2020/01/01/07%20%E6%9C%B4%E7%B4%A0%E5%8F%B6%E8%B4%9D%E6%96%AF%E7%AE%97%E6%B3%95/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="07 朴素叶贝斯算法概率基础 概率： 一件事情发生的可能性 联合概率： 包含多个条件，且所有条件同时成立的概率。P(A,B) P(A, B) &#x3D; P(A)P(B) 条件概率：事件A在另外一个事件B已经发生条件下发生的概率。 P(A|B) P(A1,A2 | B) &#x3D; P(A1 | B) * P(A2 | B) 注意： 此条件概率的成立，是由于A1, A2相互独立的结果  朴素贝叶斯 朴素： 特征独">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="http://yoursite.com/2020/01/01/07%20%E6%9C%B4%E7%B4%A0%E5%8F%B6%E8%B4%9D%E6%96%AF%E7%AE%97%E6%B3%95/_v_images/20191119213237887_19089.png">
+<meta property="og:image" content="http://yoursite.com/2020/01/01/07%20%E6%9C%B4%E7%B4%A0%E5%8F%B6%E8%B4%9D%E6%96%AF%E7%AE%97%E6%B3%95/_v_images/20191121230257865_2216.png">
+<meta property="og:image" content="http://yoursite.com/2020/01/01/07%20%E6%9C%B4%E7%B4%A0%E5%8F%B6%E8%B4%9D%E6%96%AF%E7%AE%97%E6%B3%95/_v_images/20191121230621899_475.png">
+<meta property="article:published_time" content="2020-01-01T08:53:13.606Z">
+<meta property="article:modified_time" content="2019-11-22T13:10:07.336Z">
 <meta property="article:author" content="Hello Lake">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/01/01/07%20%E6%9C%B4%E7%B4%A0%E5%8F%B6%E8%B4%9D%E6%96%AF%E7%AE%97%E6%B3%95/_v_images/20191119213237887_19089.png">
   
     <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
   
@@ -150,295 +158,327 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-07 朴素叶贝斯算法" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/01%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%BB%8B%E7%BB%8D/" class="archive-article-date">
-  	<time datetime="2020-01-01T08:53:13.655Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/01%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E4%BB%8B%E7%BB%8D/">01 机器学习介绍</a>
+    <h1 class="article-title" itemprop="name">
+      07 朴素叶贝斯算法
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/02%20%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B%E5%92%8C%E6%96%87%E6%9C%AC%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96/" class="archive-article-date">
-  	<time datetime="2020-01-01T08:53:13.653Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/02%20%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B%E5%92%8C%E6%96%87%E6%9C%AC%E7%89%B9%E5%BE%81%E6%8F%90%E5%8F%96/">02 特征工程和文本特征提取</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/03%20%E6%95%B0%E6%8D%AE%E7%89%B9%E5%BE%81%E9%A2%84%E5%A4%84%E7%90%86/" class="archive-article-date">
-  	<time datetime="2020-01-01T08:53:13.651Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/03%20%E6%95%B0%E6%8D%AE%E7%89%B9%E5%BE%81%E9%A2%84%E5%A4%84%E7%90%86/">03 数据特征预处理</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/04%20%E6%95%B0%E6%8D%AE%E9%99%8D%E7%BB%B4/" class="archive-article-date">
-  	<time datetime="2020-01-01T08:53:13.641Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/04%20%E6%95%B0%E6%8D%AE%E9%99%8D%E7%BB%B4/">04 数据降维</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/05%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/" class="archive-article-date">
-  	<time datetime="2020-01-01T08:53:13.630Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/05%20%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%BC%80%E5%8F%91%E6%B5%81%E7%A8%8B/">05 机器学习开发流程</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/06%20k-%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95/" class="archive-article-date">
-  	<time datetime="2020-01-01T08:53:13.620Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/06%20k-%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95/">06 k-近邻算法</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/07%20%E6%9C%B4%E7%B4%A0%E5%8F%B6%E8%B4%9D%E6%96%AF%E7%AE%97%E6%B3%95/" class="archive-article-date">
+        
+        <a href="/2020/01/01/07%20%E6%9C%B4%E7%B4%A0%E5%8F%B6%E8%B4%9D%E6%96%AF%E7%AE%97%E6%B3%95/" class="archive-article-date">
   	<time datetime="2020-01-01T08:53:13.606Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/07%20%E6%9C%B4%E7%B4%A0%E5%8F%B6%E8%B4%9D%E6%96%AF%E7%AE%97%E6%B3%95/">07 朴素叶贝斯算法</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="07-朴素叶贝斯算法"><a href="#07-朴素叶贝斯算法" class="headerlink" title="07 朴素叶贝斯算法"></a>07 朴素叶贝斯算法</h1><h2 id="概率基础"><a href="#概率基础" class="headerlink" title="概率基础"></a>概率基础</h2><ol>
+<li>概率： 一件事情发生的可能性</li>
+<li>联合概率： 包含多个条件，且所有条件同时成立的概率。P(A,B)<br> P(A, B) = P(A)P(B)</li>
+<li>条件概率：事件A在另外一个事件B已经发生条件下发生的概率。 P(A|B)<br> P(A1,A2 | B) = P(A1 | B) * P(A2 | B)<br> 注意： 此条件概率的成立，是由于A1, A2相互独立的结果</li>
+</ol>
+<h2 id="朴素贝叶斯"><a href="#朴素贝叶斯" class="headerlink" title="朴素贝叶斯"></a>朴素贝叶斯</h2><ol>
+<li>朴素： 特征独立，常用文档分类<ul>
+<li>在给定词比例的基础上，求各类型文档的比例</li>
+</ul>
+</li>
+<li>贝叶斯公式： （多个条件下一个结果）<br><img src="_v_images/20191119213237887_19089.png" alt=""> </li>
+</ol>
+<ul>
+<li>公式分为3个部分：<ul>
+<li>P(C): 每个文档类别的概率 （某类文档数/总文档数）</li>
+<li>P(W | C)：给定类别下特征（被预测文档中出现的词）的概率：计算方法：P(F1|C） = Ni/N<ul>
+<li>Ni : F1词在C类别文档所有文档出现的次数</li>
+<li>N: 所属C类别下的文档所有词出现的次数和</li>
+</ul>
+</li>
+<li>P(F1,F2,F3) : 预测文档中每个词的概率</li>
+</ul>
+</li>
+</ul>
+<ol start="3">
+<li>文档分类： 给定一个文档的条件下，求文档所属于科技、娱乐等类别的概率。哪个类别的概率大，则归为某个类别。</li>
+</ol>
+<ul>
+<li><p>文档：词1， 词2 ， 词3 （词出现的数量的情况下，判断类别）</p>
+<ul>
+<li>P(科技|词1，词2，词3） = P(f1,f2,f3 | 科技）*P(科技）/P(W)</li>
+<li>P(娱乐|词1，词2，词3） = P(f1,f2,f3 | 娱乐）*P(娱乐）/P(W)</li>
+</ul>
+</li>
+<li><p>由于是概率大小，则P(W)可以同时约去</p>
+</li>
+</ul>
+<h3 id="文档分类实例"><a href="#文档分类实例" class="headerlink" title="文档分类实例"></a>文档分类实例</h3><table>
+<thead>
+<tr>
+<th align="left">特征</th>
+<th align="left">科技（30篇）</th>
+<th align="left">娱乐（60篇）</th>
+<th align="left">汇总（90篇）</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">商场</td>
+<td align="left">9</td>
+<td align="left">51</td>
+<td align="left">60</td>
+</tr>
+<tr>
+<td align="left">影院</td>
+<td align="left">8</td>
+<td align="left">56</td>
+<td align="left">64</td>
+</tr>
+<tr>
+<td align="left">支付宝</td>
+<td align="left">20</td>
+<td align="left">15</td>
+<td align="left">35</td>
+</tr>
+<tr>
+<td align="left">云计算</td>
+<td align="left">63</td>
+<td align="left">0</td>
+<td align="left">63</td>
+</tr>
+<tr>
+<td align="left">汇总（求和）</td>
+<td align="left">100</td>
+<td align="left">121</td>
+<td align="left">221</td>
+</tr>
+</tbody></table>
+<p>现有一篇预测文档，出现了<strong>影院</strong>，<strong>支付宝</strong>，<strong>云计算</strong>，计算属于科技、娱乐的概率。</p>
+<ul>
+<li>科技： P(科技 |影院，支付宝，云计算）= P(影院，支付宝，云计算| 科技）* P(科技）= P(影院|科技）P(支付宝|科技） P(云计算|科技）P(科技）= （8/100）* （20/100）* （63/100）*（30/90） = 0.00456109</li>
+<li>娱乐：P(娱乐 |影院，支付宝，云计算）= （56/121）（15/121）（0/121）（60/90）= 0</li>
+</ul>
+<h3 id="拉普拉斯平滑"><a href="#拉普拉斯平滑" class="headerlink" title="拉普拉斯平滑"></a>拉普拉斯平滑</h3><ol>
+<li>目的：避免单个特征词出现次数为0 ，导致最终的计算结果为0 。</li>
+<li>原因：其他的词在这个类型文档中出现过，则还是有可能属于这个文档。</li>
+<li>P(F1|C) = (Ni +a) /(N+am)<ul>
+<li>a为指定的系数，一般取1</li>
+<li>m为训练文档中统计出的特征词的个数 （上述例子中为4）</li>
+</ul>
+</li>
+</ol>
+<h3 id="sklearn朴素贝叶斯API"><a href="#sklearn朴素贝叶斯API" class="headerlink" title="sklearn朴素贝叶斯API"></a>sklearn朴素贝叶斯API</h3><p>sklearn.naive_bayes.MultinomialNB (alpha = 1.0)</p>
+<p>###朴素贝叶斯算法案例 （sklearn 20类新闻分类）</p>
+<h4 id="案例流程"><a href="#案例流程" class="headerlink" title="案例流程"></a>案例流程</h4><ol>
+<li>加载数据，进行分割</li>
+<li>生成文章特征词</li>
+<li>朴素贝叶斯estimator进行预估</li>
+</ol>
+<h3 id="算法总结"><a href="#算法总结" class="headerlink" title="算法总结"></a>算法总结</h3><ol>
+<li>训练集误差大，结果肯定不好</li>
+<li>不需要调参</li>
+<li>优点：<ul>
+<li>发源于古典数学理论，有稳定的分类效率</li>
+<li>对缺失数据不太敏感，算法也比较简单，常用于文本分类</li>
+<li>分类准确率高，速度快</li>
+</ul>
+</li>
+<li>缺点：<ul>
+<li>由于使用样本独立性假设，对样本属性有关联时效果不好</li>
+</ul>
+</li>
+</ol>
+<h2 id="分类模型评估"><a href="#分类模型评估" class="headerlink" title="分类模型评估"></a>分类模型评估</h2><h3 id="常见评估方法"><a href="#常见评估方法" class="headerlink" title="常见评估方法"></a>常见评估方法</h3><ol>
+<li><p>estimator.score() - 准确率，预测结果正确的百分比</p>
+</li>
+<li><p>精确率（precision) - 预测结果为正例样本中真实为正例的比例<strong>（查的准）</strong></p>
+</li>
+<li><p>召回率（recall) - 真实为正例的样本中预测结果为正例的比例<strong>（查的全）</strong><br><img src="_v_images/20191121230257865_2216.png" alt=""></p>
+</li>
+<li><p>F1-score - 反映了模型的稳定性<br><img src="_v_images/20191121230621899_475.png" alt=""></p>
+<h3 id="混淆矩阵"><a href="#混淆矩阵" class="headerlink" title="混淆矩阵"></a>混淆矩阵</h3></li>
+<li><p>定义：在分类任务中，预测结果（Predicted condition) 与正确标记 （True condition)之间存在四种不同的组合，构成混淆矩阵。<br>![](<em>v</em>images/20191121230525434_25203.png =661x)</p>
+</li>
+</ol>
+<h3 id="分类评估API"><a href="#分类评估API" class="headerlink" title="分类评估API"></a>分类评估API</h3><p>sklearn.metrics.classification_report(y_true, y_pred, target_names=None)</p>
+<ul>
+<li>y_true: 真实目标值</li>
+<li>y_pred: 估计器预测目标值</li>
+<li>target_names: 目标类别名称</li>
+<li>return: 每个类别精确率和召回率</li>
+</ul>
+<h3 id="案例代码"><a href="#案例代码" class="headerlink" title="案例代码"></a>案例代码</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.datasets <span class="keyword">import</span> fetch_20newsgroups</span><br><span class="line"><span class="keyword">from</span> sklearn.feature_extraction.text <span class="keyword">import</span> TfidfVectorizer</span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split</span><br><span class="line"><span class="keyword">from</span> sklearn.naive_bayes <span class="keyword">import</span> MultinomialNB</span><br><span class="line"><span class="keyword">from</span> sklearn.metrics <span class="keyword">import</span> classification_report</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">naivebayes</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    朴素贝叶斯进行文本分类</span></span><br><span class="line"><span class="string">    :return: None</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    news = fetch_20newsgroups(subset=<span class="string">'all'</span>)</span><br><span class="line">    <span class="comment"># 进行数据分割</span></span><br><span class="line">    x_train, x_test, y_train, y_test = train_test_split(news.data, news.target_names, test_size=<span class="number">0.25</span> )</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 对数据集进行特征抽取</span></span><br><span class="line">    tf = TfidfVectorizer()</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 以训练集当中的词的列表进行每篇文章重要性统计</span></span><br><span class="line">    x_train = tf.fit_transform(x_train)</span><br><span class="line">    print(tf.get_feature_names())</span><br><span class="line">    x_test = tf.transform(x_test)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 进行朴素贝叶斯算法的计算</span></span><br><span class="line">    mlt = MultinomialNB(alpha=<span class="number">1.0</span>)</span><br><span class="line">    mlt.fit(x_train, y_train)</span><br><span class="line">    print(x_train)</span><br><span class="line">    y_predict = mlt.predict(x_test)</span><br><span class="line"></span><br><span class="line">    print(<span class="string">"预测的文章类别为："</span>, y_predict)</span><br><span class="line">    score = mlt.score(x_test, y_test)</span><br><span class="line">    print(<span class="string">"分类准确率为："</span>, score)</span><br><span class="line"></span><br><span class="line">    print(<span class="string">"每个类别的精确率和召回率："</span>, classification_report</span><br><span class="line">    (y_test,y_predict,target_names=news.target_names))</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    naivebayes()</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
-          
 
+<h2 id="模型的选择与调优"><a href="#模型的选择与调优" class="headerlink" title="模型的选择与调优"></a>模型的选择与调优</h2><h3 id="交叉验证过程"><a href="#交叉验证过程" class="headerlink" title="交叉验证过程"></a>交叉验证过程</h3><ol>
+<li><p>定义： 将拿到的训练数据，氛围训练和验证集。将数据分为5份，其中一份作为验证集，然后经过5次（组）的测试，每次都更换不同的验证集。即得到5组模型的结果，取平均值作为最终结果。又称为5折交叉验证。</p>
+</li>
+<li><p>图示：<br>![](<em>v</em>images/20191122203040291_30468.png =660x)</p>
+</li>
+</ol>
+<h3 id="超参数搜索-网格搜索"><a href="#超参数搜索-网格搜索" class="headerlink" title="超参数搜索 - 网格搜索"></a>超参数搜索 - 网格搜索</h3><ol>
+<li><p>超参数：通常情况下，有很多的参数是需要手动指定的（如K-近邻算法中的K值），这种参数就是超参数。 （外部可以调整的参数）</p>
+</li>
+<li><p>网格搜索：手动的调参过程繁杂，所以需要对模型预设集中超参数组合，每组超参数都采用交叉验证来进行评估，最后选择最优参数组合建立模型。</p>
+</li>
+<li><p>多个参数时：需要进行两两组合，或者多多组合。</p>
+</li>
+</ol>
+<h3 id="sklearn-API"><a href="#sklearn-API" class="headerlink" title="sklearn API"></a>sklearn API</h3><ul>
+<li><p>sklearn.model_selection.GridSearchCV(estimator,param_grid=None,cv=None)    <em>(CV: cross validation)</em></p>
+<ul>
+<li>对估计器的指定参数值进行详尽搜索</li>
+<li>estimator: 估计器对象</li>
+<li>param_grid: 估计器参数（dict): {“n_neighbors”: [1,3,5]}</li>
+<li>cv: 指定几折交叉验证</li>
+<li>fit: 输入训练数据</li>
+<li>score: 准确率</li>
+<li>best_score_: 在交叉验证中验证的最好结果</li>
+<li>best_estimator_: 最好的参数模型</li>
+<li>cv_results_: 每次交叉验证后的测试集准确率结果和训练集准确率结果</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> sklearn.neighbors <span class="keyword">import</span> KNeighborsClassifier</span><br><span class="line"><span class="keyword">from</span> sklearn.preprocessing <span class="keyword">import</span> StandardScaler</span><br><span class="line"><span class="keyword">from</span> sklearn.model_selection <span class="keyword">import</span> train_test_split,GridSearchCV</span><br><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">knncls</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    K-近邻预测用户签到位置</span></span><br><span class="line"><span class="string">    :return: None</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="comment"># 读取数据</span></span><br><span class="line">    data = pd.read_csv(<span class="string">'./train.csv'</span>)</span><br><span class="line">    <span class="comment"># print(data.head(10))</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 处理数据</span></span><br><span class="line">    <span class="comment"># 1.缩小数据</span></span><br><span class="line">    data = data.query(<span class="string">'x &gt;1.0 &amp; x &lt; 1.25 &amp; y &gt; 2.5 &amp; y &lt; 2.75'</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 2. 处理时间数据</span></span><br><span class="line">    time_value = pd.to_datetime(data[<span class="string">'time'</span>], unit=<span class="string">'s'</span>)</span><br><span class="line">    <span class="comment"># print(time_value)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 3. 构造一些特征, 把日期格式转换为字典格式</span></span><br><span class="line">    time_value = pd.DatetimeIndex(time_value)</span><br><span class="line">    data[<span class="string">'day'</span>] = time_value.day</span><br><span class="line">    data[<span class="string">'weekday'</span>] = time_value.weekday</span><br><span class="line">    data[<span class="string">'hour'</span>] = time_value.hour</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 4.把时间戳特征删除</span></span><br><span class="line">    data = data.drop([<span class="string">'time'</span>],axis=<span class="number">1</span>)</span><br><span class="line">    <span class="comment"># print(data)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 5.把签到数量少于n个的目标位置删除</span></span><br><span class="line">    place_count = data.groupby(<span class="string">'place_id'</span>).count() <span class="comment"># 统计place_id次数,变成行索引</span></span><br><span class="line">    tf = place_count[place_count.row_id &gt; <span class="number">3</span>].reset_index() <span class="comment"># row_id 具体次数，reset_index 把place_id生成新的一列</span></span><br><span class="line">    data = data[data[<span class="string">'place_id'</span>].isin(tf.place_id)] <span class="comment"># 筛选place_id</span></span><br><span class="line">    <span class="comment"># print(data)</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 6.取出数据中的特征值和目标值</span></span><br><span class="line">    y = data[<span class="string">'place_id'</span>]</span><br><span class="line">    x = data.drop([<span class="string">'place_id'</span>, <span class="string">'row_id'</span>], axis=<span class="number">1</span>) <span class="comment"># 去掉row_id 可以增加精度</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 7.分割训练集和测试集</span></span><br><span class="line">    x_train, x_test, y_train, y_text = train_test_split(x, y, test_size=<span class="number">0.25</span>)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 8.特征工程（标准化）</span></span><br><span class="line">    std = StandardScaler()</span><br><span class="line">    x_train = std.fit_transform(x_train)</span><br><span class="line">    x_test = std.transform(x_test)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 进行算法流程 fit, predict, score  #超参数</span></span><br><span class="line">    knn = KNeighborsClassifier() <span class="comment"># 使用网格搜索时，不用设定超参数</span></span><br><span class="line">    <span class="comment"># knn.fit(x_train, y_train)</span></span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    <span class="comment"># # 得出预测结果</span></span><br><span class="line">    <span class="comment"># y_predict = knn.predict(x_test)</span></span><br><span class="line">    <span class="comment"># print('预测的目标签到位置为：', y_predict)</span></span><br><span class="line">    <span class="comment">#</span></span><br><span class="line">    <span class="comment"># # 得出准确率</span></span><br><span class="line">    <span class="comment"># print('预测的准确率为：', knn.score(x_test, y_text))</span></span><br><span class="line"></span><br><span class="line">    <span class="comment"># 9. 进行网格搜索</span></span><br><span class="line">    param = &#123;<span class="string">'n_neighbors'</span>: [<span class="number">3</span>,<span class="number">5</span>,<span class="number">10</span>]&#125;</span><br><span class="line">    gc = GridSearchCV(knn, param_grid=param, cv=<span class="number">2</span>)</span><br><span class="line">    gc.fit(x_train, y_train)</span><br><span class="line"></span><br><span class="line">    <span class="comment"># 10.预测准确率</span></span><br><span class="line">    print(<span class="string">"在测试集上的准确率："</span>, gc.score(x_test, y_text))</span><br><span class="line">    print(<span class="string">"在交叉验证中最好的结果："</span>, gc.best_score_)</span><br><span class="line">    print(<span class="string">'选择的最好的模型：'</span>, gc.best_estimator_)</span><br><span class="line">    print(<span class="string">'每个超参数每次验证的结果：'</span>, gc.cv_results_)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">None</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    knncls()</span><br></pre></td></tr></table></figure>
+
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/01/01/07%20%E6%9C%B4%E7%B4%A0%E5%8F%B6%E8%B4%9D%E6%96%AF%E7%AE%97%E6%B3%95/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/08%20%E5%86%B3%E7%AD%96%E6%A0%91%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97/" class="archive-article-date">
-  	<time datetime="2020-01-01T08:53:13.599Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
-</a>
+<nav id="article-nav">
+  
+    <a href="/2020/01/01/06%20k-%E8%BF%91%E9%82%BB%E7%AE%97%E6%B3%95/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          06 k-近邻算法
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/01/01/08%20%E5%86%B3%E7%AD%96%E6%A0%91%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">08 决策树与随机森林</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/08%20%E5%86%B3%E7%AD%96%E6%A0%91%E4%B8%8E%E9%9A%8F%E6%9C%BA%E6%A3%AE%E6%9E%97/">08 决策树与随机森林</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/S1_%E5%88%86%E7%B1%BB%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/" class="archive-article-date">
-  	<time datetime="2020-01-01T08:53:13.597Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/S1_%E5%88%86%E7%B1%BB%E7%AE%97%E6%B3%95%E6%80%BB%E7%BB%93/">S1_分类算法总结</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2020/01/01/09%20%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8A%E7%9F%A9%E9%98%B5%E8%BF%90%E7%AE%97/" class="archive-article-date">
-  	<time datetime="2020-01-01T08:53:13.595Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/01/09%20%E7%BA%BF%E6%80%A7%E5%9B%9E%E5%BD%92%E5%8F%8A%E7%9F%A9%E9%98%B5%E8%BF%90%E7%AE%97/">09 线性回归及矩阵运算</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-    
-    <nav id="page-nav">
-      <span class="page-number current">1</span><a class="page-number" href="/archives/2020/01/page/2/">2</a><a class="extend next" rel="next" href="/archives/2020/01/page/2/">Next &amp;raquo;</a>
-    </nav>
   
 
 
@@ -462,8 +502,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
